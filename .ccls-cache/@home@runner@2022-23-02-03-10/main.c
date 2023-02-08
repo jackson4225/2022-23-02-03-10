@@ -1,5 +1,14 @@
 //block letter project
-
+/* inizialize a struct multidimensional array
+    struct MedLetter a {
+      'a',
+        {},
+        {},
+        {},
+        {},
+        {}
+    };
+*/
 #include <stdio.h>
 
 void printLetterMed(char letter[5][4]) {
