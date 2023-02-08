@@ -2,9 +2,29 @@
 
 #include <stdio.h>
 
-void printLetter(char letter[5][4]) {
+void printLetterMed(char letter[5][4]) {
   for(int i = 0; i < 5; i++) {
     for(int j = 0; j < 4; j++) {
+      printf("%c", letter[i][j]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+}
+
+void printLetterLarge(char letter[5][5]) {
+  for(int i = 0; i < 5; i++) {
+    for(int j = 0; j < 5; j++) {
+      printf("%c", letter[i][j]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+}
+
+void printLetterSmall(char letter[5][3]) {
+  for(int i = 0; i < 5; i++) {
+    for(int j = 0; j < 3; j++) {
       printf("%c", letter[i][j]);
     }
     printf("\n");
@@ -78,12 +98,12 @@ int main(void) {
     {'H', ' ', ' ', 'H'}
   };
 
-  char i[5][4] = {
-   {'I', 'I', 'I', 'I'},
-   {' ', 'I', 'I', ' '},
-   {' ', 'I', 'I', ' '},
-   {' ', 'I', 'I', ' '},
-   {'I', 'I', 'I', 'I'}
+  char i[5][3] = {
+   {'I', 'I', 'I'},
+   {' ', 'I', ' '},
+   {' ', 'I', ' '},
+   {' ', 'I', ' '},
+   {'I', 'I', 'I'}
   };
 
   char j[5][4] = {
@@ -91,7 +111,7 @@ int main(void) {
    {' ', ' ', 'J', ' '},
    {' ', ' ', 'J', ' '},
    {' ', ' ', 'J', ' '},
-   {'J', 'J', 'J', ' '}
+   {'J', 'J', ' ', ' '}
   };
 
   char k[5][4] = {
@@ -110,12 +130,12 @@ int main(void) {
    {'L', 'L', 'L', 'L'}
   };
 
-  char m[5][4] = {
-   {'M', ' ', ' ', 'M'},
-   {'M', 'M', 'M', 'M'},
-   {'M', ' ', ' ', 'M'},
-   {'M', ' ', ' ', 'M'},
-   {'M', ' ', ' ', 'M'}
+  char m[5][5] = {
+   {'M', ' ', ' ', ' ', 'M'},
+   {'M', 'M', ' ', 'M', 'M'},
+   {'M', ' ', 'M', ' ', 'M'},
+   {'M', ' ', ' ', ' ', 'M'},
+   {'M', ' ', ' ', ' ', 'M'}
   };
 
   char n[5][4] = {
@@ -166,12 +186,12 @@ int main(void) {
    {'S', 'S', 'S', ' '}
   };
 
-  char t[5][4] = {
-   {'T', 'T', 'T', 'T'},
-   {' ', 'T', 'T', ' '},
-   {' ', 'T', 'T', ' '},
-   {' ', 'T', 'T', ' '},
-   {' ', 'T', 'T', ' '}
+  char t[5][3] = {
+   {'T', 'T', 'T',},
+   {' ', 'T', ' ',},
+   {' ', 'T', ' ',},
+   {' ', 'T', ' ',},
+   {' ', 'T', ' ',}
   };
 
   char u[5][4] = {
@@ -190,12 +210,12 @@ int main(void) {
    {' ', 'V', 'V', ' '}
   };
 
-  char w[5][4] = {
-   {'W', ' ', ' ', 'W'},
-   {'W', ' ', ' ', 'W'},
-   {'W', ' ', ' ', 'W'},
-   {'W', 'W', 'W', 'W'},
-   {'W', ' ', ' ', 'W'}
+  char w[5][5] = {
+   {'W', ' ', ' ', ' ', 'W'},
+   {'W', ' ', ' ', ' ', 'W'},
+   {'W', ' ', 'W', ' ', 'W'},
+   {'W', 'W', ' ', 'W', 'W'},
+   {'W', ' ', ' ', ' ', 'W'}
   };
 
   char x[5][4] = {
@@ -206,12 +226,12 @@ int main(void) {
    {'X', ' ', ' ', 'X'}
   };
 
-  char y[5][4] = {
-   {'Y', ' ', ' ', 'Y'},
-   {' ', 'Y', 'Y', ' '},
-   {' ', 'Y', 'Y', ' '},
-   {' ', 'Y', 'Y', ' '},
-   {' ', 'Y', 'Y', ' '}
+  char y[5][5] = {
+   {'Y', ' ', ' ', ' ', 'Y'},
+   {' ', 'Y', ' ', 'Y', ' '},
+   {' ', ' ', 'Y', ' ', ' '},
+   {' ', ' ', 'Y', ' ', ' '},
+   {' ', ' ', 'Y', ' ', ' '}
   };
 
   char z[5][4] = {
@@ -222,32 +242,32 @@ int main(void) {
    {'Z', 'Z', 'Z', 'Z'}
   };
   
-  printLetter(a);
-  printLetter(b);
-  printLetter(c);
-  printLetter(d);
-  printLetter(e);
-  printLetter(f);
-  printLetter(g);
-  printLetter(h);
-  printLetter(i);
-  printLetter(j);
-  printLetter(k);
-  printLetter(l);
-  printLetter(m);
-  printLetter(n);
-  printLetter(o);
-  printLetter(p);
-  printLetter(q);
-  printLetter(r);
-  printLetter(s);
-  printLetter(t);
-  printLetter(u);
-  printLetter(v);
-  printLetter(w);
-  printLetter(x);
-  printLetter(y);
-  printLetter(z);
+  printLetterMed(a);
+  printLetterMed(b);
+  printLetterMed(c);
+  printLetterMed(d);
+  printLetterMed(e);
+  printLetterMed(f);
+  printLetterMed(g);
+  printLetterMed(h);
+  printLetterSmall(i);
+  printLetterMed(j);
+  printLetterMed(k);
+  printLetterMed(l);
+  printLetterLarge(m);
+  printLetterMed(n);
+  printLetterMed(o);
+  printLetterMed(p);
+  printLetterMed(q);
+  printLetterMed(r);
+  printLetterMed(s);
+  printLetterSmall(t);
+  printLetterMed(u);
+  printLetterMed(v);
+  printLetterLarge(w);
+  printLetterMed(x);
+  printLetterLarge(y);
+  printLetterMed(z);
   
   
   return 0;
