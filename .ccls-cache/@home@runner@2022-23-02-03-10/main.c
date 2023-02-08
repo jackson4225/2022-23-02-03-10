@@ -294,20 +294,20 @@ BlockMed z = {
     }
   };
 
-void printLetterMed(char letter[5][4]) {
+void printLetterMed(BlockMed letter) {
   for(int i = 0; i < 5; i++) {
     for(int j = 0; j < 4; j++) {
-      printf("%c", letter[i][j]);
+      printf("%c", letter.block[i][j]);
     }
     printf("\n");
   }
   printf("\n");
 }
 
-void printLetterLarge(char letter[5][5]) {
+void printLetterLarge(BlockLarge letter) {
   for(int i = 0; i < 5; i++) {
     for(int j = 0; j < 5; j++) {
-      printf("%c", letter[i][j]);
+      printf("%c", letter.block[i][j]);
     }
     printf("\n");
   }
@@ -317,7 +317,7 @@ void printLetterLarge(char letter[5][5]) {
 void printLetterSmall(BlockSmall letter) {
   for(int i = 0; i < 5; i++) {
     for(int j = 0; j < 3; j++) {
-      printf("%c", letter[i][j]);
+      printf("%c", letter.block[i][j]);
     }
     printf("\n");
   }
@@ -326,36 +326,90 @@ void printLetterSmall(BlockSmall letter) {
 
 int main(void) {
 
+
+  char userinput;
+  printf("Type in a letter of your choice: ");
+  scanf("%c", &userinput);
+
+  if(userinput == 'a' || userinput == 'A') {
+    printLetterMed(a);
+  }
+  else if(userinput == 'b' || userinput == 'B') {
+    printLetterMed(b);
+  }
+  else if(userinput == 'c' || userinput == 'C') {
+    printLetterMed(c);
+  }
+  else if(userinput == 'd' || userinput == 'D') {
+    printLetterMed(d);
+  }
+  else if(userinput == 'e' || userinput == 'E') {
+    printLetterMed(e);
+  }
+  else if(userinput == 'f' || userinput == 'F') {
+    printLetterMed(f);
+  }
+  else if(userinput == 'g' || userinput == 'G') {
+    printLetterMed(g);
+  }
+  else if(userinput == 'h' || userinput == 'H') {
+    printLetterMed(h);
+  }
+  else if(userinput == 'i' || userinput == 'I') {
+    printLetterSmall(i);
+  }
+  else if(userinput == 'j' || userinput == 'J') {
+    printLetterMed(j);
+  }
+  else if(userinput == 'k' || userinput == 'K') {
+    printLetterMed(k);
+  }
+  else if(userinput == 'l' || userinput == 'L') {
+    printLetterMed(l);
+  }
+  else if(userinput == 'm' || userinput == 'M') {
+    printLetterLarge(m);
+  }
+  else if(userinput == 'n' || userinput == 'n') {
+    printLetterMed(n);
+  }
+  else if(userinput == 'o' || userinput == 'O')  {
+    printLetterMed(o);
+  }
+  else if(userinput == 'p' || userinput == 'P') {
+    printLetterMed(p);
+  }
+  else if(userinput == 'q' || userinput == 'Q') {
+    printLetterMed(q);
+  }
+  else if(userinput == 'r' || userinput == 'R') {
+    printLetterMed(r);
+  }
+  else if(userinput == 's' || userinput == 'S') {
+    printLetterMed(s);
+  }
+  else if(userinput == 't' || userinput == 'T') {
+    printLetterSmall(t);
+  }
+  else if(userinput == 'u' || userinput == 'U') {
+    printLetterMed(u);
+  }
+  else if(userinput == 'v' || userinput == 'V') {
+    printLetterMed(v);
+  }
+  else if(userinput == 'w' || userinput == 'W') {
+    printLetterLarge(w);
+  }
+  else if(userinput == 'x' || userinput == 'X') {
+    printLetterMed(x);
+  }
+  else if(userinput == 'y' || userinput == 'Y') {
+    printLetterLarge(y);
+  }
+  else if(userinput == 'z' || userinput == 'Z') {
+    printLetterMed(z);
+  }
   
-  
-  /*
-  printLetterMed(a);
-  printLetterMed(b);
-  printLetterMed(c);
-  printLetterMed(d);
-  printLetterMed(e);
-  printLetterMed(f);
-  printLetterMed(g);
-  printLetterMed(h);
-  printLetterSmall(i);
-  printLetterMed(j);
-  printLetterMed(k);
-  printLetterMed(l);
-  printLetterLarge(m);
-  printLetterMed(n);
-  printLetterMed(o);
-  printLetterMed(p);
-  printLetterMed(q);
-  printLetterMed(r);
-  printLetterMed(s);
-  printLetterSmall(t);
-  printLetterMed(u);
-  printLetterMed(v);
-  printLetterLarge(w);
-  printLetterMed(x);
-  printLetterLarge(y);
-  printLetterMed(z);
-  */
   
   return 0;
 }
