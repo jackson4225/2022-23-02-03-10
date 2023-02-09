@@ -2,14 +2,18 @@
 /* inizialize a struct multidimensional array
     struct MedLetter a {
       'a',
-        {},
-        {},
-        {},
-        {},
-        {}
+        {
+          {},
+          {},
+          {},
+          {},
+          {}
+        }  
     };
 */
 #include <stdio.h>
+#include <string.h>
+
 
 typedef struct MedLetter {
   char letter;
@@ -25,6 +29,16 @@ typedef struct SmallLetter {
   char letter;
   char block[5][3];
 } BlockSmall;
+
+typedef struct Number {
+  char num;
+  char block[5][4];
+} BlockNum;
+
+typedef struct SmallNumber {
+  char letter;
+  char block[5][3];
+} Block_SNum;
 
 BlockMed a = {
     'a',
@@ -294,6 +308,108 @@ BlockMed z = {
     }
   };
 
+BlockNum zero = {
+  '0',
+  {
+    {' ', '0', '0', ' '},
+    {'0', ' ', ' ', '0'},
+    {'0', '0', '0', '0'},
+    {'0', ' ', ' ', '0'},
+    {' ', '0', '0', ' '},
+  }
+};
+Block_SNum one = {
+  '1',
+  {
+    {' ', '1', ' ',},
+    {'1', '1', ' ',},
+    {' ', '1', ' ',},
+    {' ', '1', ' ',},
+    {'1', '1', '1',},
+  }
+};
+BlockNum two = {
+  '2',
+  {
+    {'2', '2', '2', ' '},
+    {' ', ' ', ' ', '2'},
+    {' ', '2', '2', ' '},
+    {'2', ' ', ' ', ' '},
+    {'2', '2', '2', '2'},
+  }
+};
+BlockNum three = {
+  '3',
+  {
+    {'3', '3', '3', ' '},
+    {' ', ' ', ' ', '3'},
+    {' ', '3', '3', ' '},
+    {' ', ' ', ' ', '3'},
+    {'3', '3', '3', ' '},
+  }
+};
+BlockNum four = {
+  '4',
+  {
+    {'4', ' ', '4', ' '},
+    {'4', ' ', '4', ' '},
+    {'4', '4', '4', '4'},
+    {' ', ' ', '4', ' '},
+    {' ', ' ', '4', ' '},
+  }
+};
+BlockNum five = {
+  '5',
+  {
+    {'5', '5', '5', '5'},
+    {'5', ' ', ' ', ' '},
+    {'5', '5', '5', ' '},
+    {' ', ' ', ' ', '5'},
+    {'5', '5', '5', ' '},
+  }
+};
+BlockNum six = {
+  '6',
+  {
+    {' ', '6', '6', ' '},
+    {'6', ' ', ' ', ' '},
+    {'6', '6', '6', ' '},
+    {'6', ' ', ' ', '6'},
+    {' ', '6', '6', ' '},
+  }
+};
+BlockNum seven = {
+  '7',
+  {
+    {'7', '7', '7', '7'},
+    {' ', ' ', ' ', '7'},
+    {' ', ' ', '7', ' '},
+    {' ', '7', ' ', ' '},
+    {' ', '7', ' ', ' '},
+  }
+};
+BlockNum eight = {
+  '8',
+  {
+    {' ', '8', '8', ' '},
+    {'8', ' ', ' ', '8'},
+    {' ', '8', '8', ' '},
+    {'8', ' ', ' ', '8'},
+    {' ', '8', '8', ' '},
+  }
+};
+BlockNum nine = {
+  '9',
+  {
+    {' ', '9', '9', ' '},
+    {'9', ' ', ' ', '9'},
+    {' ', '9', '9', '9'},
+    {' ', ' ', ' ', '9'},
+    {' ', '9', '9', ' '},
+  }
+};
+
+
 void printLetterMed(BlockMed letter) {
   for(int i = 0; i < 5; i++) {
     for(int j = 0; j < 4; j++) {
@@ -330,6 +446,8 @@ int main(void) {
   char userinput;
   printf("Type in a letter of your choice: ");
   scanf("%c", &userinput);
+
+  printf("\n");
 
   if(userinput == 'a' || userinput == 'A') {
     printLetterMed(a);
@@ -373,7 +491,7 @@ int main(void) {
   else if(userinput == 'n' || userinput == 'n') {
     printLetterMed(n);
   }
-  else if(userinput == 'o' || userinput == 'O')  {
+  else if(userinput == 'o' || userinput == 'O') {
     printLetterMed(o);
   }
   else if(userinput == 'p' || userinput == 'P') {
